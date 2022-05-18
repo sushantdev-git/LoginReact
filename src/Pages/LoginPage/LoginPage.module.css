@@ -10,4 +10,16 @@
     height: 400px;
     width: 300px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.LoginForm > button{
+    border: none;
+    background-color: white;
+    width: 60px;
+    cursor: pointer;
 }
