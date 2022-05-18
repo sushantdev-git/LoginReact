@@ -12,7 +12,7 @@ function LoginPage(){
         <div className={styles.LoginPage}>
             <div className={styles.LoginForm}>
                 {Login ? <LoginForm /> : <SignUpForm />}
-                <button>{Login ? "SignUp" : "Login"}</button>
+                <button onClick={() => setLogin(!Login)}>{Login ? "SignUp" : "Login"}</button>
             </div>
         </div>
     )

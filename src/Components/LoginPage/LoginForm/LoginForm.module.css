@@ -6,10 +6,14 @@
     margin: 10px 0px 10px 0px;
 }
 
+.LoginForm > h2{
+    margin: auto;
+}
+
 .LoginInput{
     width: 100%;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-    border-radius: 10px;
+    border-radius: 5px;
     margin: 10px 0px;
     padding: 10px;
 }
@@ -29,4 +33,7 @@
     width: 250px;
     margin: 20px auto;
     height: 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: lightgreen;
 }

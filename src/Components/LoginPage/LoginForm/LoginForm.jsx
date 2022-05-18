@@ -6,6 +6,7 @@ function LoginForm(){
 
     return(
         <div className={styles.LoginForm}>
+            <h2>Login</h2>
             <div className={styles.LoginInput}>
                 <p>Username</p>
                 <input type="text"></input>
