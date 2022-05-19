@@ -46,9 +46,8 @@ const registerWithEmailAndPassword = async ( email, password, setError) => {
   try {
     const res = await createUserWithEmailAndPassword(auth, email, password);
     const user = res.user;
-    await addDoc(collection(db, "users"), {
+    await addDoc(collection(db, "users/"+user.uid), {
       uid: user.uid,
-      authProvider: "local",
       email,
     });
     setError("Successfull")

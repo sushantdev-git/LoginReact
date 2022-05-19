@@ -10,4 +10,31 @@
     height: 80%;
     width: 70%;
     border: 1px solid grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.line{
+    width: 100%;
+    height: 1px;
+    border: 1px solid black;
+}
+
+.DashBoard h1{
+    text-align: center;
+}
+
+.UserDetials{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.UserDetials img{
+    height: 100px;
+    margin: 10px;
 }

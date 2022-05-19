@@ -1,0 +1,1 @@
+1> crete a collection with user email and store user name and image.
