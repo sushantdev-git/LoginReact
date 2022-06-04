@@ -38,3 +38,9 @@
     cursor: pointer;
     background-color: lightgreen;
 }
+
+.LoginForm > p {
+    font-size: 15;
+    font-style: italic;
+    text-align: center;
+}

@@ -35,11 +35,9 @@ function HomePage(){
     };
 
 
-    const handleFileInputChange = e => {
-        console.log(e.target.files[0]);
-    
-        let file = e.target.files[0];
+    const handleFileInputChange = file => {
 
+        console.log(file)
         console.log("file changeddd...")
     
         getBase64(file)
@@ -73,6 +71,11 @@ function HomePage(){
     const uplodaData = async () => {
         const uid = auth.currentUser.uid;
 
+        if(username.length < 3){
+            alert("Please enter a valid name");
+            return;
+        }
+
         try {
             let user = auth.currentUser;
 
@@ -87,11 +90,12 @@ function HomePage(){
             else{
 
                 let refdoc = doc(db, "app/users/"+user.uid, docId)
+                
                 await updateDoc(refdoc, {
                     uid: user.uid,
                     email: user.email,
                     username:username, 
-                    image: base64S,
+                    image: base64S ? base64S : fetchedImage,
                 });
             }
         
@@ -120,7 +124,7 @@ function HomePage(){
                     <input type="text" value={username} onChange={(e) => setUsername(e.target.value)}></input>
 
                     <h3>Choose Image</h3>
-                    <input type="file" onChange= {(e) => handleFileInputChange(e)}></input>
+                    <input type="file" onChange= {(e) => handleFileInputChange(e.target.files[0])}></input>
                     <img src={image ? URL.createObjectURL(image) : ""}/>
                     <button onClick={uplodaData}>Submit</button>
                 </div>
